@@ -6,12 +6,32 @@ class ScanHistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FilledButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        child: Text("WishlistScreen"),
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.black,
+        title: Text(
+          "Scan History",
+          style: TextStyle(color: Colors.white, fontSize: 20),
+        ),
+        leading: Padding(
+          padding: EdgeInsets.only(left: 10),
+          child: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Color.fromARGB(255, 255, 255, 255),
+              size: 25,
+            ),
+          ),
+        ),
       ),
+      body: Column(children: [
+        
+        ],
+      ),
+      backgroundColor: Colors.black,
     );
   }
 }
