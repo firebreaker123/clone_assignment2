@@ -47,21 +47,73 @@ class MainApp extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        SizedBox(
-                          height: 20,
-                          child: Icon(Icons.ac_unit, color: Colors.white),
+                        Stack(
+                          children: [
+                            Icon(Icons.home, color: Colors.white, size: 30),
+                            Padding(
+                              padding: EdgeInsets.only(top: 30, left: 1),
+                              child: Text(
+                                "Home",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          height: 20,
-                          child: Icon(Icons.ac_unit, color: Colors.white),
+                        Stack(
+                          children: [
+                            Icon(
+                              CupertinoIcons.barcode_viewfinder,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 30, left: 3),
+                              child: Text(
+                                "Scan",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          height: 20,
-                          child: Icon(Icons.ac_unit, color: Colors.white),
+                        Stack(
+                          children: [
+                            Icon(
+                              CupertinoIcons.heart,
+                              color: Color.fromARGB(255, 200, 255, 0),
+                              size: 30,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 30, left: 3),
+                              child: Text(
+                                "Scan",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 200, 255, 0),
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          height: 20,
-                          child: Icon(Icons.ac_unit, color: Colors.white),
+                        Stack(
+                          children: [
+                            Icon(Icons.person, color: Colors.white, size: 30),
+                            Padding(
+                              padding: EdgeInsets.only(top: 30, left: 9),
+                              child: Text(
+                                "My",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -75,6 +127,41 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
+/* Center(
+                  child: Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(right: 20),
+                          child: Text(
+                            "Home",
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(right: 40),
+                          child: Text(
+                          "Scan",
+                          style: TextStyle(color: Colors.white, fontSize: 10),
+                        ),
+                        ),
+                        Text(
+                          "Wish",
+                          style: TextStyle(
+                            color: const Color.fromARGB(255, 200, 255, 0),
+                            fontSize: 10,
+                          ),
+                        ),
+                        Text(
+                          "My",
+                          style: TextStyle(color: Colors.white, fontSize: 10),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),*/
 /*
 Padding(
                           padding: EdgeInsets.only(left: 60),
