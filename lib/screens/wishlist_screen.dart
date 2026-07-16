@@ -28,7 +28,7 @@ class WishlistScreen extends StatelessWidget {
                   ? "${wishlistProducts.length} item"
                   : "${wishlistProducts.length} items",
               style: TextStyle(
-                color: Color.fromARGB(255, 124, 124, 124),
+                color: Color.fromARGB(255, 145, 145, 145),
                 fontSize: 14,
               ),
             ),
@@ -39,8 +39,8 @@ class WishlistScreen extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 20,
-              mainAxisSpacing: 40,
-              childAspectRatio: 0.8,
+              mainAxisSpacing: 35,
+              childAspectRatio: 0.77,
             ),
             itemCount: wishlistProducts.length,
             itemBuilder: (context, index) {
@@ -63,7 +63,6 @@ class WishlistScreen extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          //padding: (index % 2 == 0) ? EdgeInsets.only(right: 15, bottom: 140,) : EdgeInsets.only(right: 35, bottom: 140,),
                           top: 40,
                           right: (index % 2 == 0) ? 15 : 35,
                           child: Align(
@@ -78,13 +77,28 @@ class WishlistScreen extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Padding(
                       padding: (index % 2 == 0)
-                          ? EdgeInsets.only(left: 20, top: 20)
-                          : EdgeInsets.only(top: 20,),
+                          ? EdgeInsets.only(left: 20, top: 15)
+                          : EdgeInsets.only(top: 15),
                       child: Text(
                         wishlistProducts[index].productName,
                         style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: (index % 2 == 0)
+                          ? EdgeInsets.only(left: 20, top: 4)
+                          : EdgeInsets.only(top: 4),
+                      child: Text(
+                        wishlistProducts[index].date,
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 145, 145, 145),
+                          fontSize: 12,
                         ),
                       ),
                     ),
