@@ -1,11 +1,11 @@
 class ProductImage {
-  ProductImage({required this.imageName, required this.productName, this.paddingNum = 0, required this.heartState, this.date});
+  ProductImage({required this.imageName, required this.productName, this.paddingNum = 0, required this.heartState, this.date = "No date"});
 
   final String imageName;
   final String productName;
   final int paddingNum;
   bool heartState;
-  final String? date;
+  final String date;
 }
 
 final jinjjampong = ProductImage(
