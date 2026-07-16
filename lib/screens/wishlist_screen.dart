@@ -41,7 +41,7 @@ class WishlistScreen extends StatelessWidget {
               crossAxisCount: 2,
               crossAxisSpacing: 20,
               mainAxisSpacing: 35,
-              childAspectRatio: 0.77,
+              childAspectRatio: 0.8,
             ),
             itemCount: wishlistProducts.length,
             itemBuilder: (context, index) {
@@ -86,6 +86,7 @@ class WishlistScreen extends StatelessWidget {
                         style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 15,
+                          //fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
@@ -110,8 +111,6 @@ class WishlistScreen extends StatelessWidget {
             },
           ),
         ),
-        HeartBadge(heartObject: wishlistProducts[0]),
-        HeartSnackBar(snackState: false),
       ],
     );
   }
