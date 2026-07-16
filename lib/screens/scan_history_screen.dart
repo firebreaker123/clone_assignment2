@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/scan_card.dart';
 
 class ScanHistoryScreen extends StatelessWidget {
   const ScanHistoryScreen({super.key});
@@ -27,8 +28,9 @@ class ScanHistoryScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(children: [
-        
+      body: Column(
+        children: [
+        //ScanCard(),
         ],
       ),
       backgroundColor: Colors.black,
