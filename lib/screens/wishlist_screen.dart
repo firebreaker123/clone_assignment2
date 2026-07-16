@@ -1,4 +1,5 @@
 import 'package:clone_assignment2/data/dummy_data.dart';
+import 'package:clone_assignment2/widgets/product_grid_card.dart';
 import 'package:flutter/material.dart';
 import '../screens/scan_history_screen.dart';
 import '../widgets/heart_badge.dart';
@@ -56,9 +57,10 @@ class WishlistScreen extends StatelessWidget {
                               : EdgeInsets.only(right: 20, top: 20),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                            child: Image.asset(
-                              wishlistProducts[index].imageName,
-                              fit: BoxFit.cover,
+                            child: ProductGridCard(
+                              productNameSnack:
+                                  wishlistProducts[index].productName,
+                              indexSnack: index,
                             ),
                           ),
                         ),
