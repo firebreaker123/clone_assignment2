@@ -86,6 +86,7 @@ class WishlistScreen extends StatelessWidget {
                         style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 15,
+                          fontWeight: FontWeight.bold,
                           //fontWeight: FontWeight.bold,
                         ),
                       ),
