@@ -53,4 +53,6 @@ final List<ProductImage> wishlistProducts = [
 final List<ProductImage> scanHistoryProducts = [
   hotCheetosDillPickle,
   hotCheetosDillPickle,
+  kimchiNoodle,
 ];
+

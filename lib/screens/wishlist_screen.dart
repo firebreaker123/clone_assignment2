@@ -2,6 +2,7 @@ import 'package:clone_assignment2/data/dummy_data.dart';
 import 'package:clone_assignment2/widgets/product_grid_card.dart';
 import 'package:flutter/material.dart';
 import '../screens/scan_history_screen.dart';
+import '../screens/recently_viewed_screen.dart';
 import '../widgets/heart_badge.dart';
 
 class WishlistScreen extends StatelessWidget {
@@ -11,14 +12,30 @@ class WishlistScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        FilledButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ScanHistoryScreen()),
-            );
-          },
-          child: Text("ScanHistoryPage"),
+        Row(
+          children: [
+            FilledButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ScanHistoryScreen()),
+                );
+              },
+              child: Text("ScanHistoryPage"),
+            ),
+            FilledButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all<Color>(Colors.amber),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RecentlyViewedScreen()),
+                );
+              },
+              child: Text("RecentlyViewedScreen"),
+            ),
+          ],
         ),
         Align(
           alignment: Alignment.centerLeft,

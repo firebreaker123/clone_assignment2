@@ -29,8 +29,7 @@ class ScanHistoryScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        children: [
+      body: 
           Expanded(
             child: ListView.builder(
               itemCount: scanHistoryProducts.length,
@@ -45,8 +44,6 @@ class ScanHistoryScreen extends StatelessWidget {
               },
             ),
           ),
-        ],
-      ),
       backgroundColor: Colors.black,
     );
   }
