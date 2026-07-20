@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/scan_card.dart';
+import 'package:clone_assignment2/data/dummy_data.dart';
 
 class ScanHistoryScreen extends StatelessWidget {
   const ScanHistoryScreen({super.key});
@@ -30,10 +31,18 @@ class ScanHistoryScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-        //ScanCard(),
+          Padding(
+            padding: EdgeInsets.only(top: 20, left: 16, right: 16),
+            child: ScanCard(
+              imageFile: hotCheetosDillPickle.imageName,
+              cardDate: hotCheetosDillPickle.date,
+            ),
+          ),
         ],
       ),
       backgroundColor: Colors.black,
     );
   }
 }
+
+//hotCheetosDillPickle.imageName

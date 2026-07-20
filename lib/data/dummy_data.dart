@@ -36,6 +36,13 @@ final kimchiNoodle = ProductImage(
   date: "02.07.2026",
 );
 
+final hotCheetosDillPickle = ProductImage(
+  imageName: "../assets/img/hotCheetosDillPickle.jpg",
+  productName: "Hot Cheetos Dill Pickle",
+  heartState: false,
+  date: "03.12.1995",
+);
+
 final List<ProductImage> wishlistProducts = [
   jinjjampong,
   kahluaCoffee,
