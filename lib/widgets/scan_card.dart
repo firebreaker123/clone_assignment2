@@ -9,10 +9,9 @@ class ScanCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 16/9,
+      aspectRatio: 16 / 9,
       child: ClipRRect(
-        clipBehavior: Clip.hardEdge,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(16),
         child: GestureDetector(
           onTap: () {
             var cardSnack = SnackBar(
@@ -24,7 +23,11 @@ class ScanCard extends StatelessWidget {
           },
           child: Stack(
             children: [
-              Image.asset(imageFile, fit: BoxFit.fill),
+              Image.asset(
+                imageFile,
+                fit: BoxFit.cover,
+                width: double.infinity,
+              ),
               DateBadge(date: cardDate),
             ],
           ),
@@ -63,76 +66,3 @@ class DateBadge extends StatelessWidget {
     );
   }
 }
-
-/* TextButton(
-      onPressed: () {
-        var cardSnack = SnackBar(
-          content: Text(cardDate, style: TextStyle(color: Colors.white)),
-          backgroundColor: Color.fromARGB(255, 42, 0, 110),
-          duration: Duration(seconds: 1),
-        );
-        ScaffoldMessenger.of(context).showSnackBar(cardSnack);
-      },
-      child: AspectRatio(
-       aspectRatio: 16/9,
-       child: ClipRRect(
-        borderRadius: BorderRadius.circular(60),
-        child: Image.asset(imageFile, fit: BoxFit.cover),
-      ),
-      ),
-    );*/
-
-/* return AspectRatio(
-      aspectRatio: 16/9,
-    child: TextButton(
-      onPressed: () {
-        var cardSnack = SnackBar(
-          content: Text(
-            cardDate,
-            style: TextStyle(
-              color: Colors.white,  
-            ),
-          ),
-          backgroundColor: Color.fromARGB(255, 42, 0, 110),
-          duration: Duration(seconds: 1),
-        );
-        ScaffoldMessenger.of(context).showSnackBar(cardSnack);
-      },
-      child: ClipRRect(
-      borderRadius: BorderRadius.circular(60),
-      child: Image.asset(
-        imageFile,
-        fit: BoxFit.cover,
-      ),
-      ),
-    ),
-    ); */
-
-/* ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: ProductGridCard(
-                              productNameSnack:
-                                  wishlistProducts[index].productName,
-                              indexSnack: index,
-                            ),
-                          ), */
-
-// hotCheetosDillPickle.imageName
-
-/* Image.asset(
-        wishlistProducts[indexSnack].imageName,
-        fit: BoxFit.cover,
-      ) */
-
-/* onTap: () {
-        var heartSnack = SnackBar(
-          content: Text("Removed from wishlist"),
-          backgroundColor: Color.fromARGB(0, 43, 57, 253),
-          duration: Duration(seconds: 1),
-        );
-        ScaffoldMessenger.of(context).showSnackBar(heartSnack);
-      },
-      child: Icon(
-        (snackState) ? CupertinoIcons.heart_fill : CupertinoIcons.heart,
-        color: heartColor,
-      ),*/
