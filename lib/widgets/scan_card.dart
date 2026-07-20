@@ -9,7 +9,7 @@ class ScanCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 16 / 9,
+      aspectRatio: 16/9,
       child: ClipRRect(
         clipBehavior: Clip.hardEdge,
         borderRadius: BorderRadius.circular(20),
@@ -24,7 +24,7 @@ class ScanCard extends StatelessWidget {
           },
           child: Stack(
             children: [
-              Image.asset(imageFile, fit: BoxFit.cover, ),
+              Image.asset(imageFile, fit: BoxFit.fill),
               DateBadge(date: cardDate),
             ],
           ),
