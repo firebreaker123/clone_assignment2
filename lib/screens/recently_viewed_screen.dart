@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../widgets/product_list_tile.dart';
+import '../data/dummy_data.dart';
 
 class RecentlyViewedScreen extends StatelessWidget {
   const RecentlyViewedScreen({super.key});
@@ -39,7 +41,7 @@ class RecentlyViewedScreen extends StatelessWidget {
                   "14 items",
                   style: TextStyle(
                     color: Color.fromARGB(255, 180, 180, 180),
-                    fontSize: 14,
+                    fontSize: 13,
                   ),
                 ),
               ),
@@ -59,14 +61,45 @@ class RecentlyViewedScreen extends StatelessWidget {
                   },
                   child: Text(
                     "Edit",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(color: Colors.white, fontSize: 15),
                   ),
                 ),
               ),
             ],
+          ),
+
+          Expanded(
+            child: ListView.builder(
+              itemCount: recentlyViewedProducts.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: (index == 0)
+                      ? EdgeInsets.only(top: 20)
+                      : EdgeInsets.only(),
+                  child: ProductListTile(
+                    products: recentlyViewedProducts[index],
+                  ),
+                );
+              },
+            ),
           ),
         ],
       ),
     );
   }
 }
+
+/* Expanded(
+            child: ListView.builder(
+              itemCount: scanHistoryProducts.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: (index == 0) ? EdgeInsets.only(top: 20, left: 20, right: 20) : EdgeInsets.only(top: 12, left: 20, right: 20),
+                  child: ScanCard(
+                    imageFile: scanHistoryProducts[index].imageName,
+                    cardDate: scanHistoryProducts[index].date,
+                  ),
+                );
+              },
+            ),
+          ), */

@@ -43,6 +43,41 @@ final hotCheetosDillPickle = ProductImage(
   date: "03.12.1995",
 );
 
+final yeolRamen = ProductImage(
+  imageName: "../assets/img/yeolRamen.jpg",
+  productName: "Yeol Ramen",
+  heartState: false,
+  date: "01.31.1883",
+);
+
+final pasquierCremeBrulee = ProductImage(
+  imageName: "../assets/img/pasquierCremeBrulee.jpg",
+  productName: "Pasquier Creme Brulee",
+  heartState: false,
+  date: "11.23.2005",
+);
+
+final daboRaspberryJam = ProductImage(
+  imageName: "../assets/img/daboRaspberryJam.jpg",
+  productName: "Dabo Raspberry Jam",
+  heartState: false,
+  date: "05.17.1102",
+);
+
+final heliosStrawberryJam = ProductImage(
+  imageName: "../assets/img/heliosStrawberryJam.webp",
+  productName: "Helios Strawberry Jam",
+  heartState: false,
+  date: "10.16.2094",
+);
+
+final comboCondiments = ProductImage(
+  imageName: "../assets/img/comboCondiments.webp",
+  productName: "Combo Condiments",
+  heartState: true,
+  date: "11.11.1111",
+);
+
 final List<ProductImage> wishlistProducts = [
   jinjjampong,
   kahluaCoffee,
@@ -56,3 +91,12 @@ final List<ProductImage> scanHistoryProducts = [
   kimchiNoodle,
 ];
 
+final List<ProductImage> recentlyViewedProducts = [
+  jinjjampong,
+  yeolRamen,
+  kimchiNoodle,
+  pasquierCremeBrulee,
+  daboRaspberryJam,
+  heliosStrawberryJam,
+  comboCondiments,
+];
